@@ -1,7 +1,19 @@
 def get_agent_response(prompt: str) -> str:
     """
-    This is a fake agent for now. 
-    It always returns 'I don't know'.
-    Later, we will replace this with a real LLM (like OpenAI).
+    A simple rule-based agent for testing.
+    Later, this can be replaced with a real LLM.
     """
-    return "I don't know"
+    prompt_lower = prompt.lower()
+    
+    if "capital of france" in prompt_lower:
+        return "The capital of France is Paris."
+    elif "15 multiplied by 4" in prompt_lower:
+        return "The answer is 60."
+    elif "add two numbers" in prompt_lower:
+        return "def add(a, b): return a + b"
+    elif "opposite of 'hot'" in prompt_lower:
+        return "The opposite is cold."
+    elif "translate 'hello'" in prompt_lower:
+        return "Hola"
+    else:
+        return "I don't know."
