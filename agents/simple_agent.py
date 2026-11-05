@@ -15,5 +15,15 @@ def get_agent_response(prompt: str) -> str:
         return "The opposite is cold."
     elif "translate 'hello'" in prompt_lower:
         return "Hola"
+    elif "romeo and juliet" in prompt_lower:
+        return "William Shakespeare wrote it."
+    elif "square root of 64" in prompt_lower:
+        return "The answer is 8."
+    elif "red planet" in prompt_lower:
+        return "Mars is the Red Planet."
+    elif "how many continents" in prompt_lower:
+        return "There are 7 continents."
+    elif "chemical symbol for water" in prompt_lower:
+        return "The symbol is H2O."
     else:
         return "I don't know."

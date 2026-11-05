@@ -18,3 +18,23 @@ tasks:
   - id: task_05
     input: "Translate 'hello' to Spanish."
     expected: "hola"
+
+  - id: task_06
+    input: "Who wrote the play Romeo and Juliet?"
+    expected: "Shakespeare"
+
+  - id: task_07
+    input: "What is the square root of 64?"
+    expected: "8"
+
+  - id: task_08
+    input: "What planet is known as the Red Planet?"
+    expected: "Mars"
+
+  - id: task_09
+    input: "How many continents are there?"
+    expected: "7"
+
+  - id: task_10
+    input: "What is the chemical symbol for water?"
+    expected: "H2O"
