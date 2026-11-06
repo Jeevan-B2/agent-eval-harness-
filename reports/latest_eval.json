@@ -1,78 +1,78 @@
 {
-    "timestamp": "2026-11-05 22:54:16.777887",
+    "timestamp": "2026-11-06 12:02:55.898445",
     "total_tasks": 10,
-    "passed": 10,
-    "pass_rate": 100.0,
+    "passed": 9,
+    "pass_rate": 90.0,
     "results": [
         {
             "id": "task_01",
             "prompt": "What is the capital of France?",
             "expected": "Paris",
-            "agent_answer": "The capital of France is Paris.",
+            "agent_answer": "Paris",
             "passed": true
         },
         {
             "id": "task_02",
             "prompt": "What is 15 multiplied by 4?",
             "expected": "60",
-            "agent_answer": "The answer is 60.",
+            "agent_answer": "60",
             "passed": true
         },
         {
             "id": "task_03",
             "prompt": "Write a python function to add two numbers.",
             "expected": "def add(a, b): return a + b",
-            "agent_answer": "def add(a, b): return a + b",
+            "agent_answer": "```python\ndef add(a, b):\n    return a + b\n```",
             "passed": true
         },
         {
             "id": "task_04",
             "prompt": "What is the opposite of 'hot'?",
             "expected": "cold",
-            "agent_answer": "The opposite is cold.",
+            "agent_answer": "Cold",
             "passed": true
         },
         {
             "id": "task_05",
             "prompt": "Translate 'hello' to Spanish.",
             "expected": "hola",
-            "agent_answer": "Hola",
+            "agent_answer": "hola",
             "passed": true
         },
         {
             "id": "task_06",
             "prompt": "Who wrote the play Romeo and Juliet?",
             "expected": "Shakespeare",
-            "agent_answer": "William Shakespeare wrote it.",
+            "agent_answer": "William Shakespeare",
             "passed": true
         },
         {
             "id": "task_07",
             "prompt": "What is the square root of 64?",
             "expected": "8",
-            "agent_answer": "The answer is 8.",
+            "agent_answer": "8",
             "passed": true
         },
         {
             "id": "task_08",
             "prompt": "What planet is known as the Red Planet?",
             "expected": "Mars",
-            "agent_answer": "Mars is the Red Planet.",
+            "agent_answer": "Mars",
             "passed": true
         },
         {
             "id": "task_09",
             "prompt": "How many continents are there?",
             "expected": "7",
-            "agent_answer": "There are 7 continents.",
+            "agent_answer": "7",
             "passed": true
         },
         {
             "id": "task_10",
             "prompt": "What is the chemical symbol for water?",
             "expected": "H2O",
-            "agent_answer": "The symbol is H2O.",
-            "passed": true
+            "agent_answer": "H\u2082O",
+            "passed": false
         }
     ]
 }

@@ -1,29 +1,35 @@
+import os
+from groq import Groq
+from dotenv import load_dotenv
+
+# Load the secret key from the .env file
+load_dotenv()
+
+api_key = os.getenv("GROQ_API_KEY")
+client = Groq(api_key=api_key) if api_key else None
+
 def get_agent_response(prompt: str) -> str:
     """
-    A simple rule-based agent for testing.
-    Later, this can be replaced with a real LLM.
+    Sends the prompt to the real Llama 3 model via Groq and returns the text.
     """
-    prompt_lower = prompt.lower()
-    
-    if "capital of france" in prompt_lower:
-        return "The capital of France is Paris."
-    elif "15 multiplied by 4" in prompt_lower:
-        return "The answer is 60."
-    elif "add two numbers" in prompt_lower:
-        return "def add(a, b): return a + b"
-    elif "opposite of 'hot'" in prompt_lower:
-        return "The opposite is cold."
-    elif "translate 'hello'" in prompt_lower:
-        return "Hola"
-    elif "romeo and juliet" in prompt_lower:
-        return "William Shakespeare wrote it."
-    elif "square root of 64" in prompt_lower:
-        return "The answer is 8."
-    elif "red planet" in prompt_lower:
-        return "Mars is the Red Planet."
-    elif "how many continents" in prompt_lower:
-        return "There are 7 continents."
-    elif "chemical symbol for water" in prompt_lower:
-        return "The symbol is H2O."
-    else:
-        return "I don't know."
+    if not client:
+        return "Error: GROQ_API_KEY not found. Check your .env file."
+
+    try:
+        chat_completion = client.chat.completions.create(
+            messages=[
+                {
+                    "role": "system",
+                    "content": "Answer this prompt as briefly as possible. Do not use full sentences unless necessary. Just provide the direct answer."
+                },
+                {
+                    "role": "user",
+                    "content": prompt
+                }
+            ],
+            model="openai/gpt-oss-120b", # Free, incredibly fast model
+            temperature=0.0, # Keep it strictly factual
+        )
+        return chat_completion.choices[0].message.content.strip()
+    except Exception as e:
+        return f"Error: {str(e)}"

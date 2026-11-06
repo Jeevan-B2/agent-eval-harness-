@@ -1,3 +1,5 @@
 pyyaml
 streamlit 
 pandas 
+groq
+python-dotenv
