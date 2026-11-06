@@ -1,5 +1,5 @@
 {
-    "timestamp": "2026-11-06 12:02:55.898445",
+    "timestamp": "2026-11-06 12:11:52.384091",
     "total_tasks": 10,
     "passed": 9,
     "pass_rate": 90.0,
@@ -29,7 +29,7 @@
             "id": "task_04",
             "prompt": "What is the opposite of 'hot'?",
             "expected": "cold",
-            "agent_answer": "Cold",
+            "agent_answer": "cold",
             "passed": true
         },
         {

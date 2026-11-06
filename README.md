@@ -17,8 +17,7 @@ This project provides an **Evaluation Harness** that runs an AI agent against a 
 
 ## 🚀 Live Demo (Dashboard)
 *(Take a screenshot of your Streamlit dashboard and drag-and-drop it here on GitHub to generate a link. It should look like this:)*
-![Dashboard Screenshot](YOUR_IMAGE_LINK_HERE)
-
+![Dashboard Screenshot](assets/dashboard.png)
 ## 🛠️ Tech Stack
 - **Python 3.10+**
 - **Streamlit** & **Pandas** (for the dashboard)
